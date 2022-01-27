@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  microros:
+    build:
+      context: .
+    restart: on-failure
+    tty: true 
+    ports:
+      - "8888:8888/udp"
+    command: ros2 launch rosbot_xl system.launch.py
