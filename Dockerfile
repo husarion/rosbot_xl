@@ -19,7 +19,7 @@ WORKDIR /app
 
 # create ros2_ws, copy and build package
 RUN mkdir -p ros2_ws/src
-COPY ./rosbot_xl_ekf /app/ros2_ws/src/rosbot_xl_ekf
+COPY ./rosbot_xl /app/ros2_ws/src/rosbot_xl
 RUN git clone https://github.com/micro-ROS/micro_ros_msgs.git --single-branch --branch=$ROS_DISTRO /app/ros2_ws/src/micro_ros_msgs \
     && git clone https://github.com/micro-ROS/micro-ROS-Agent.git --single-branch --branch=$ROS_DISTRO /app/ros2_ws/src/micro_ros_agent
 
